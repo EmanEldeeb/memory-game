@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.game-controls,
+.result {
+  background-color: #2195f357;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-controls .start,
+.result > div {
+  text-transform: capitalize;
+  font-size: 24px;
+  color: white;
+  background-color: #333;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2169f3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.result > div {
+  width: 240px;
+  height: 68px;
+}
+.info-container {
+  width: 80vw;
+  padding: 20px;
+  border: 2px solid #2169f3;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  font-size: 20px;
+  height: 65px;
+}
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 50px auto;
+  height: calc(100vh - 65px);
+}
+.game-board.preventflipping {
+  pointer-events: none;
+}
+.game-board .image-box {
+  position: relative;
+  /* height: calc(90% / 4); */
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  flex: 1 0 calc(85% / 4);
+  margin: 0 10px 20px;
+  cursor: pointer;
+  text-align: center;
+}
+.game-board .image-box.flipped,
+.game-board .image-box.match {
+  transform: rotateY(-180deg);
+}
+.game-board .image-box .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  border: 5px solid #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board .image-box .front {
+  background-color: #333;
+  line-height: 200px;
+}
+.game-board .image-box .front::before {
+  content: "!";
+  font-size: 6rem;
+  color: white;
+}
+
+.game-board .image-box .back {
+  background-color: #607d8b;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+.game-board .image-box .back > i {
+  font-size: 5rem;
+  color: #fff;
+}
+@media (max-width: 676px) {
+  .game-board .image-box .back > i {
+    font-size: 3rem;
+  }
+  .game-board .image-box {
+    height: 150px;
+    flex: 1 0 calc(80% / 3);
+  }
+}
