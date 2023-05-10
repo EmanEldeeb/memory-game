@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memory game</title>
+    <link rel="stylesheet" href="assets/memory.css" />
+    <script
+      src="https://kit.fontawesome.com/347beaf4f2.js"
+      crossorigin="anonymous"></script>
+    <script src="assets/memory.js" defer></script>
+  </head>
+  <body>
+    <div class="result hidden">
+      <div class="success hidden">congratulations<span></span></div>
+      <div class="fail hidden">game over :(</div>
+    </div>
+    <div class="game-controls">
+      <span class="start" id="start">start game</span>
+    </div>
+    <div class="info-container">
+      <div class="name">name: <span></span></div>
+      <div class="tries">tries: <span>0</span></div>
+    </div>
+    <div class="game-board">
+      <div class="image-box" data-card="star">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-regular fa-star"></i></div>
+      </div>
+      <div class="image-box" data-card="star">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-regular fa-star"></i></div>
+      </div>
+      <div class="image-box" data-card="umbrella">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-umbrella"></i></div>
+      </div>
+      <div class="image-box" data-card="umbrella">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-umbrella"></i></div>
+      </div>
+      <div class="image-box" data-card="cloud">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-cloud-rain"></i></div>
+      </div>
+      <div class="image-box" data-card="cloud">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-cloud-rain"></i></div>
+      </div>
+      <div class="image-box" data-card="baby">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-baby-carriage"></i></div>
+      </div>
+      <div class="image-box" data-card="baby">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-baby-carriage"></i></div>
+      </div>
+      <div class="image-box" data-card="candy">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-candy-cane"></i></div>
+      </div>
+      <div class="image-box" data-card="candy">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-candy-cane"></i></div>
+      </div>
+      <div class="image-box" data-card="astronaut">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-user-astronaut"></i></div>
+      </div>
+      <div class="image-box" data-card="astronaut">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-user-astronaut"></i></div>
+      </div>
+
+
+      <div class="image-box" data-card="bomb">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-bomb"></i></div>
+      </div>
+      <div class="image-box" data-card="bomb">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-solid fa-bomb"></i></i></div>
+      </div>
+      <div class="image-box" data-card="plane">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-regular fa-paper-plane"></i></div>
+      </div>
+      <div class="image-box" data-card="plane">
+        <div class="face front"></div>
+        <div class="face back"><i class="fa-regular fa-paper-plane"></i></div>
+      </div>
+    </div>
+    <audio
+      id="success-audio"
+      src="sounds/Success-sound-effect.mp3"
+      preload="auto"></audio>
+    <audio id="fail-audio" src="sounds/fail-144746.mp3" preload="auto"></audio>
+  </body>
+</html>
