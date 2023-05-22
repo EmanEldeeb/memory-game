@@ -70,6 +70,7 @@ body {
   transition: transform 1s;
   transform-style: preserve-3d;
   flex: 1 0 calc(85% / 4);
+
   margin: 0 10px 20px;
   cursor: pointer;
   text-align: center;
@@ -118,6 +119,6 @@ body {
   }
   .game-board .image-box {
     height: 150px;
-    flex: 1 0 calc(80% / 3);
+    flex: 0 0 calc(80% / 3);
   }
 }
